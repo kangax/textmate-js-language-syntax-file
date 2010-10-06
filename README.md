@@ -12,6 +12,7 @@
 - Adds missing ES5 built-ins
       
         JSON.stringify(); // JSON is highlighted
+        Date.now(); // now is highlighted
   
 - Adds missing ES5 array methods
 
@@ -24,4 +25,9 @@
 
 - Adds missing console.* methods
     
-        console.profile(); // profile should be highlighted
+        console.profile(); // profile is highlighted
+
+- Fixes regexp literals matching (when they are preceded with !, +, -, etc.)
+
+        !/^foo.bar/.test('foo'); // literal is highlghted
+        
