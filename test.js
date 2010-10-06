@@ -1,4 +1,4 @@
-/* These array methods should be highlighted */
+/* These array methods should all be highlighted */
 
 [].concat()
 [].join()
@@ -32,7 +32,7 @@ JSON.stringify()
 1e+2
 23.12e-2347
 
-/* These console methods should be all highlighted identically */
+/* These `console` methods should all be highlighted */
 
 console.warn
 console.info
@@ -43,3 +43,12 @@ console.timeEnd
 console.assert
 console.profile
 console.debug
+
+/* These `Object.prototype.*` methods should all be highlighted */
+
+({}).toString()
+({}).toLocaleString()
+({}).valueOf()
+({}).hasOwnProperty()
+({}).isPrototypeOf()
+({}).propertyIsEnumerable()
