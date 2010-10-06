@@ -56,6 +56,7 @@ console.debug
 /* "foo" and "bar" should be highlighted identically */
 
 ({ foo: function bar(){ } });
+var foo = function bar(){ };
 
 /* Date methods shold all be highlighted */
 

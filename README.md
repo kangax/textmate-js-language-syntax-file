@@ -7,7 +7,8 @@
 
 - Highlights function identifiers in named function expressions
 
-        ({ foo: function bar(){ } }); // "foo" and "bar" are highlighted identically
+        ({ foo: function bar(){ } }); 
+        var foo = function bar(){ }; // "foo" and "bar" are highlighted identically
 
 - Adds missing ES5 built-ins
       
@@ -30,4 +31,18 @@
 - Fixes regexp literals matching (when they are preceded with !, +, -, etc.)
 
         !/^foo.bar/.test('foo'); // literal is highlghted
-        
+
+
+### Known limitations:
+
+- Identifiers can not contain unicode escape sequences (e.g. `function \u0500(){ }`)
+- Certain productions are not newlines-friendly (e.g. `function \n foo(){}` doesn't match function declaration yet)
+
+
+### TODO:
+
+    // "if" should not be highlighted as a reserved word here
+    ({ if: bar });
+    
+    // Should understand new ES5 accessors syntax (highlight `get` same way as function identifier)
+    ({ get foo(){ }, set foo(){ } }); 
