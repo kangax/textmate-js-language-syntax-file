@@ -52,3 +52,21 @@ console.debug
 ({}).hasOwnProperty()
 ({}).isPrototypeOf()
 ({}).propertyIsEnumerable()
+
+/* "foo" and "bar" should be highlighted identically */
+
+({ foo: function bar(){ } });
+
+/* Date methods shold all be highlighted */
+
+Date.parse();
+Date.UTC();
+Date.now();
+
+/* These regular expression literals should all be highlighted identically */
+
+!/x/
+1,/x/
++/x/
+-/x/
+(/x/)
