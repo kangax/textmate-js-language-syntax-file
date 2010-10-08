@@ -71,3 +71,16 @@ Date.now();
 +/x/
 -/x/
 (/x/)
+
+/* ES5 accessors should be highlighted similar to functions */
+
+({ get foo(){ }, set foo(){ } });
+
+({
+  get _$565656 (foo, bar, baz) { },
+  x: 25,
+  y: null,
+  set asas_asasas() {
+    /* ... */
+  }
+});

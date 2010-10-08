@@ -32,6 +32,11 @@
 
         !/^foo.bar/.test('foo'); // literal is highlghted
 
+    
+- Highlights ES5 accessors similar to functions
+    
+        ({ get foo() { }, set foo(value) { } });
+
 
 ### Known limitations:
 
@@ -41,8 +46,5 @@
 
 ### TODO:
 
-    // "if" should not be highlighted as a reserved word here
+    // "if" should not be highlighted as a reserved word here (or should it?)
     ({ if: bar });
-    
-    // Should understand new ES5 accessors syntax (highlight `get` same way as function identifier)
-    ({ get foo(){ }, set foo(){ } }); 
