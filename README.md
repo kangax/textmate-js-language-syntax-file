@@ -1,6 +1,6 @@
 ### Enhancements
 
-- Fixes matching of numeric literals with exponents
+- Fixes highlighting of numeric literals with exponents
         
         123e-12;
         -5.673E+290;
@@ -12,8 +12,9 @@
 
 - Adds missing ES5 built-ins
       
-        JSON.stringify(); // JSON is highlighted
-        Date.now(); // now is highlighted
+        JSON.stringify(); // `JSON` is highlighted
+        Date.now(); // `now` is highlighted
+        encodeURIComponent(); // `encodeURIComponent` is highlighted
   
 - Adds missing ES5 array methods
 
@@ -24,9 +25,15 @@
 
         ({}).hasOwnProperty('foo'); // hasOwnProperty is highlighted
 
+- Adds missing ES5 Object.* methods
+        
+        Object.getPrototypeOf(); // getPrototypeOf is highlighted
+        Object.seal(); // seal is highlighted
+
 - Adds missing console.* methods
     
         console.profile(); // profile is highlighted
+        console.debug(); // debug is highlighted
 
 - Fixes regexp literals matching (when they are preceded with !, +, -, etc.)
 
@@ -42,6 +49,7 @@
 
 - Identifiers can not contain unicode escape sequences (e.g. `function \u0500(){ }`)
 - Certain productions are not newlines-friendly (e.g. `function \n foo(){}` doesn't match function declaration yet)
+- ES5 accessors can not have numeric or string literals as identifiers (will fix)
 
 
 ### TODO:

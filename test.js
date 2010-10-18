@@ -84,3 +84,30 @@ Date.now();
     /* ... */
   }
 });
+
+/* ES5 builtins should be highlighted as built-in functions */
+
+encodeURIComponent()
+decodeURIComponent()
+encodeURI()
+decodeURI()
+
+/* ES5 Object.* methods should be highlighted */
+
+Object.getPrototypeOf()
+Object.getOwnPropertyDescriptor()
+Object.getOwnPropertyNames()
+Object.create()
+Object.defineProperty()
+Object.defineProperties()
+Object.seal()
+Object.freeze()
+Object.preventExtensions()
+Object.isSealed()
+Object.isFrozen()
+Object.isExtensible()
+Object.keys()
+
+/* `bind` in Function.prototype.bind should be highlighted as a method */
+
+(function(){}).bind({ x: 1, y: 2 });
