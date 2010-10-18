@@ -111,3 +111,9 @@ Object.keys()
 /* `bind` in Function.prototype.bind should be highlighted as a method */
 
 (function(){}).bind({ x: 1, y: 2 });
+
+/* `if` and `break` _should_ be highlighted as reserved words 
+  (to avoid using reserved words as property names — which is disallowed in ES3, 
+  and is best avoided for compatibility reasons) */
+
+({ if: 1, break: 2 });

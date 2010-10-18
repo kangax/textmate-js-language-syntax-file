@@ -1,4 +1,4 @@
-### Enhancements
+### What changed?
 
 - Fixes highlighting of numeric literals with exponents
         
@@ -45,14 +45,8 @@
         ({ get foo() { }, set foo(value) { } });
 
 
-### Known limitations:
+### Known limitations (future fixes):
 
 - Identifiers can not contain unicode escape sequences (e.g. `function \u0500(){ }`)
 - Certain productions are not newlines-friendly (e.g. `function \n foo(){}` doesn't match function declaration yet)
 - ES5 accessors can not have numeric or string literals as identifiers (will fix)
-
-
-### TODO:
-
-    // "if" should not be highlighted as a reserved word here (or should it?)
-    ({ if: bar });
