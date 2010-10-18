@@ -45,6 +45,15 @@
         ({ get foo() { }, set foo(value) { } });
 
 
+### How to install
+
+1. Go to "Bundles" &rarr; "Bundle Editor" &rarr; "Edit Languages". Choose "JavaScript" language.
+2. Replace the existing content with that from JavaScript.plist from this repository.
+
+**Note**
+
+This is most definitely a poor man way to replace the language file, but I had problems with Textmate recognizing language file when simply replacing original JavaScript.plist with the one from this repository. If anyone knows how to solve this, I'd love to hear it.
+
 ### Known limitations (future fixes):
 
 - Identifiers can not contain unicode escape sequences (e.g. `function \u0500(){ }`)
