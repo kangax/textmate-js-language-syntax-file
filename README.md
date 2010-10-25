@@ -44,6 +44,18 @@
     
         ({ get foo() { }, set foo(value) { } });
 
+- Highlights methods w. whitespace between identifier and parens
+
+        alert (123); // alert is highlighted
+        foo.toString (); // toString is highlighted
+
+- Consistently highlights named function expressions in object literals
+
+        ({
+          "foo": function () { },
+          "bar": function bar() { }
+        })
+
 
 ### How to install
 

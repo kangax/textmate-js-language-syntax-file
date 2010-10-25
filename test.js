@@ -117,3 +117,20 @@ Object.keys()
   and is best avoided for compatibility reasons) */
 
 ({ if: 1, break: 2 });
+
+/* function calls with space in between identifier and call operator should still be highlighted as functions */
+
+alert (1);
+foo.toString ();
+
+/* named function expressions as property values in object literals (where property names are string literals) 
+    should be highlighted SAME way as anonymous function expressions in same context */
+
+({
+  "foo": function() {
+    
+  },
+  "bar": function bar() {
+    
+  }
+})
