@@ -17,9 +17,10 @@
 [].reduce()
 [].reduceRight()
 
-/* JSON should be highlighted */
+/* JSON, parse and stringify should be highlighted */
 
 JSON.stringify()
+JSON.parse()
 
 /* These should all be highlighted as literals */
 
